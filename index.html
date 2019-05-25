@@ -1,11 +1,27 @@
 <html>
 
 <head>
-    <script></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
 </head>
 
 <body>
-    Hello, Jack!! 🤘🏼im creating a game today and tommorow, it is my first time so my daddy is helping me with it.
+    Hello, Jack!! 🤘🏼im creating a game today and tommorow, it is my first time so my daddy is helping me with it. it
+    will be a type of agario.
+
+    <script>
+        function setup() {
+            createCanvas(640, 480);
+        }
+
+        function draw() {
+            if (mouseIsPressed) {
+                fill(0);
+            } else {
+                fill(255);
+            }
+            ellipse(mouseX, mouseY, 80, 80);
+        }
+    </script>
 </body>
 
 </html>
