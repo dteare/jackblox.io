@@ -2,6 +2,7 @@
 
 <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
+    <script src="./javascripts/blob.js"></script>
 </head>
 
 <body>
@@ -9,17 +10,27 @@
     will be a type of agario.
 
     <script>
+        let blob;
+        let blobs = [];
+
         function setup() {
-            createCanvas(640, 480);
+            createCanvas(600, 600);
+            blob = new Blob(width / 2, height / 2, 64);
+
+            for (let i = 0; i < 10; i++) {
+                blobs[i] = new Blob(random(width), random(height), 16);
+            }
         }
 
         function draw() {
-            if (mouseIsPressed) {
-                fill(255, 0, 0); // R, G, B
-            } else {
-                fill(0, 0, 255);
+            background(0, 0, 0)
+            blob.show();
+
+            for (let i = 0; i < blobs.length; i++) {
+                blobs[i].show();
             }
-            ellipse(mouseX, mouseY, 80, 80);
+
+            blob.update();
         }
     </script>
 </body>
