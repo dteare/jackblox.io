@@ -1,0 +1,12 @@
+{
+  "name": "jackblox.io.server",
+  "version": "1.0.0",
+  "description": "Server side of jackblox.io",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "start": "node server.js",
+  "author": "JackBlox772 & Sir Papa",
+  "license": "ISC"
+}
